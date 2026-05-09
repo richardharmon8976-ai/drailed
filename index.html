@@ -652,90 +652,231 @@
     <div class="reveal">
       <span class="section-tag">&#x1F374; What We Serve</span>
       <h2 class="section-title">The <em>Menu</em></h2>
-      <p class="section-desc">Comfort food classics made to satisfy. $10–20 per person.</p>
+      <p class="section-desc">Real comfort food, real prices. Something for everyone.</p>
     </div>
     <div class="menu-tabs">
       <button class="tab active" onclick="filterMenu('all', this)">All</button>
-      <button class="tab" onclick="filterMenu('food', this)">Food</button>
+      <button class="tab" onclick="filterMenu('coneys', this)">Coneys</button>
+      <button class="tab" onclick="filterMenu('food', this)">Food &amp; Sides</button>
+      <button class="tab" onclick="filterMenu('specials', this)">Daily Specials</button>
+      <button class="tab" onclick="filterMenu('kids', this)">Kids Menu</button>
       <button class="tab" onclick="filterMenu('drinks', this)">Drinks</button>
     </div>
     <div class="menu-grid" id="menuGrid">
 
-      <div class="menu-card reveal" data-cat="food">
-        <!-- Replace src with your actual chili dog photo path -->
-        <img class="menu-card-img" src="images/chili-dogs.jpg" alt="Chili Dogs"
+      <!-- CONEYS -->
+      <div class="menu-card reveal" data-cat="coneys">
+        <img class="menu-card-img" src="images/chili-dogs.jpg" alt="Flint-Style Coney"
           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="menu-card-img-placeholder" style="display:none;background:linear-gradient(135deg,#2a1a00,#1a0d00);">&#x1F32D;</div>
         <div class="menu-card-body">
-          <div class="menu-card-name">Coney Dogs <span class="menu-card-badge">Fan Favorite</span></div>
-          <div class="menu-card-desc">Classic coney-style dogs loaded with chili, mustard, and onions. Served with crispy fries.</div>
-          <div class="menu-card-price">$10–14</div>
+          <div class="menu-card-name">Flint-Style Coney <span class="menu-card-badge">Fan Favorite</span></div>
+          <div class="menu-card-desc">Koegel dogs served with coney sauce, mustard &amp; onions. The real deal.</div>
+          <div class="menu-card-price">$3.99 each &nbsp;|&nbsp; 2 w/ Fries $10.00</div>
         </div>
       </div>
 
-      <div class="menu-card reveal" data-cat="food" style="transition-delay:0.1s">
-        <!-- Replace src with your actual taco salad photo path -->
+      <!-- FOOD -->
+      <div class="menu-card reveal" data-cat="food" style="transition-delay:0.05s">
         <img class="menu-card-img" src="images/taco-salad.jpg" alt="Taco Salad"
           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="menu-card-img-placeholder" style="display:none;background:linear-gradient(135deg,#0a2000,#1a3000);">&#x1F966;</div>
         <div class="menu-card-body">
           <div class="menu-card-name">Taco Salad</div>
-          <div class="menu-card-desc">A mountain of crispy tortilla chips, seasoned ground beef, shredded cheese, fresh lettuce, tomatoes, and nacho cheese sauce. Served with sour cream.</div>
-          <div class="menu-card-price">$12–16</div>
+          <div class="menu-card-desc">A mountain of crispy tortilla chips, seasoned beef, shredded cheese, fresh lettuce, tomatoes, and nacho cheese. Served with sour cream.</div>
+          <div class="menu-card-price">See daily specials</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="food" style="transition-delay:0.1s">
+        <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#1a0800,#2a1000);">&#x1F35F;</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Chili Cheese Fries</div>
+          <div class="menu-card-desc">Golden fries smothered in chili and melted cheese. Full order only.</div>
+          <div class="menu-card-price">$6.99</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="food" style="transition-delay:0.15s">
+        <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#001020,#001a30);">&#x1F372;</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Cup of Chili</div>
+          <div class="menu-card-desc">Hearty house chili served by the cup or bowl.</div>
+          <div class="menu-card-price">$3.50 cup &nbsp;|&nbsp; $4.99 bowl</div>
         </div>
       </div>
 
       <div class="menu-card reveal" data-cat="food" style="transition-delay:0.2s">
-        <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#200020,#100010);">&#x1F35F;</div>
+        <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#100a20,#200a30);">&#x1F9C5;</div>
         <div class="menu-card-body">
-          <div class="menu-card-name">Nachos</div>
-          <div class="menu-card-desc">Tortilla chips loaded with toppings. A house favorite for sharing — or not.</div>
-          <div class="menu-card-price">$10–15</div>
+          <div class="menu-card-name">Soup of the Day</div>
+          <div class="menu-card-desc">Ask your server what's on today. Our vegetable beef soup is a guest favorite — almost like a stew.</div>
+          <div class="menu-card-price">$3.50 cup &nbsp;|&nbsp; $4.99 bowl</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="food" style="transition-delay:0.25s">
+        <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#1a1000,#2a1800);">&#x1F35F;</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Regular Fries</div>
+          <div class="menu-card-desc">Crispy golden fries. Available in half or full order.</div>
+          <div class="menu-card-price">$2.99 half &nbsp;|&nbsp; $4.99 full</div>
         </div>
       </div>
 
       <div class="menu-card reveal" data-cat="food" style="transition-delay:0.3s">
-        <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#1a0a00,#2a1500);">&#x1F357;</div>
+        <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#1a0800,#300a00);">&#x1F360;</div>
         <div class="menu-card-body">
-          <div class="menu-card-name">Chicken Dishes <span class="menu-card-badge">Must Try</span></div>
-          <div class="menu-card-desc">"Amazing chicken" — that's what our guests say. Come find out why.</div>
-          <div class="menu-card-price">$12–18</div>
+          <div class="menu-card-name">Sweet Potato Fries</div>
+          <div class="menu-card-desc">Sweet and crispy. Available in half or full order.</div>
+          <div class="menu-card-price">$3.99 half &nbsp;|&nbsp; $5.99 full</div>
         </div>
       </div>
 
-      <div class="menu-card reveal" data-cat="food" style="transition-delay:0.4s">
-        <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#001020,#001a30);">&#x1F372;</div>
+      <div class="menu-card reveal" data-cat="food" style="transition-delay:0.35s">
+        <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#0a1a00,#102800);">&#x1F35E;</div>
         <div class="menu-card-body">
-          <div class="menu-card-name">Vegetable Beef Soup</div>
-          <div class="menu-card-desc">Hearty, rich, and almost stew-like. Guests rave about this one. Ask your server — it's a seasonal special.</div>
-          <div class="menu-card-price">$7–10</div>
+          <div class="menu-card-name">Beer Battered Fries</div>
+          <div class="menu-card-desc">Fries with a light beer batter coating. Available in half or full order.</div>
+          <div class="menu-card-price">$3.50 half &nbsp;|&nbsp; $5.50 full</div>
         </div>
       </div>
 
-      <div class="menu-card reveal" data-cat="drinks" style="transition-delay:0.5s">
+      <!-- DAILY SPECIALS -->
+      <div class="menu-card reveal" data-cat="specials" style="transition-delay:0.05s">
+        <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#1a0020,#0a0010);font-size:2rem;">&#x1F31E;</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Sunday Fun Day</div>
+          <div class="menu-card-desc">Appetizer specials all day plus pint deals. Kick back and enjoy the weekend.</div>
+          <div class="menu-card-price">Ask your server</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="specials" style="transition-delay:0.1s">
+        <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#2a1a00,#1a0d00);">&#x1F32D;</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Coney Monday <span class="menu-card-badge">Special</span></div>
+          <div class="menu-card-desc">2 Flint-Style Coneys with fries + draft pint deals. Amberbock, Bud Light, or Miller Lite on tap.</div>
+          <div class="menu-card-price">$10.00 combo + drink deals</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="specials" style="transition-delay:0.15s">
+        <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#1a1000,#2a0800);">&#x1F32E;</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Taco Tuesday</div>
+          <div class="menu-card-desc">3 Tacos or a Wet Burrito + Margarita served with chips &amp; salsa.</div>
+          <div class="menu-card-price">Ask your server</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="specials" style="transition-delay:0.2s">
+        <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#001a10,#002a18);">&#x1F9C4;</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Wednesday Specials</div>
+          <div class="menu-card-desc">Fried Pickles, Fried Mushrooms, Fried Cauliflower. "It's good for you."</div>
+          <div class="menu-card-price">Ask your server</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="specials" style="transition-delay:0.25s">
+        <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#1a0a00,#2a1200);">&#x1F357;</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Thursday Specials</div>
+          <div class="menu-card-desc">Crispy Chicken Sandwich (with or without fries) + Margaritas served with chips &amp; salsa.</div>
+          <div class="menu-card-price">Ask your server</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="specials" style="transition-delay:0.3s">
+        <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#001020,#001830);">&#x1F41F;</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Fish Friday <span class="menu-card-badge">Best Around</span></div>
+          <div class="menu-card-desc">Beer battered Atlantic cod with fries, cole slaw &amp; a roll. "We have the best fish dinner around!!"</div>
+          <div class="menu-card-price">Ask your server</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="specials" style="transition-delay:0.35s">
+        <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#1a0010,#2a0018);">&#x1F357;</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Saturday Specials</div>
+          <div class="menu-card-desc">Chicken Wings by the piece, Fireball shots, and Summer Shanty drinks. Biggest night of the week!</div>
+          <div class="menu-card-price">Ask your server</div>
+        </div>
+      </div>
+
+      <!-- KIDS -->
+      <div class="menu-card reveal" data-cat="kids" style="transition-delay:0.05s">
+        <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#0a1a20,#102a30);">&#x1F357;</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">2-Pc Chicken Tenders <span class="menu-card-badge">Kids</span></div>
+          <div class="menu-card-desc">Two crispy chicken tenders served with fries.</div>
+          <div class="menu-card-price">$6.50</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="kids" style="transition-delay:0.1s">
+        <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#1a1000,#2a1800);">&#x1F9C0;</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Cheese Quesadilla <span class="menu-card-badge">Kids</span></div>
+          <div class="menu-card-desc">Simple and delicious cheesy quesadilla.</div>
+          <div class="menu-card-price">$4.99</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="kids" style="transition-delay:0.15s">
+        <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#1a0800,#2a1000);">&#x1F35E;</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Grilled Cheese &amp; Fries <span class="menu-card-badge">Kids</span></div>
+          <div class="menu-card-desc">Classic grilled cheese sandwich served with fries.</div>
+          <div class="menu-card-price">$5.99</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="kids" style="transition-delay:0.2s">
+        <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#100a20,#1a1030);">&#x1F32D;</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Hot Dog &amp; Chips <span class="menu-card-badge">Kids</span></div>
+          <div class="menu-card-desc">A kid-size hot dog served with chips.</div>
+          <div class="menu-card-price">$3.50</div>
+        </div>
+      </div>
+
+      <!-- DRINKS -->
+      <div class="menu-card reveal" data-cat="drinks" style="transition-delay:0.05s">
         <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#1a0010,#0a0020);">&#x1F37A;</div>
         <div class="menu-card-body">
-          <div class="menu-card-name">Draft &amp; Bottled Beer</div>
-          <div class="menu-card-desc">Austin Brothers Beer Co. 12oz bottles from $3. Cold, crisp, and always ready.</div>
-          <div class="menu-card-price">From $3</div>
+          <div class="menu-card-name">Draft Pints</div>
+          <div class="menu-card-desc">Amberbock, Bud Light, Miller Lite on tap. Cold and always fresh.</div>
+          <div class="menu-card-price">Ask your server</div>
         </div>
       </div>
 
-      <div class="menu-card reveal" data-cat="drinks" style="transition-delay:0.6s">
+      <div class="menu-card reveal" data-cat="drinks" style="transition-delay:0.1s">
+        <div class="menu-card-img-placeholder" style="background:linear-gradient(135dec,#1a0010,#0a0010);">&#x1F37A;</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Austin Brothers Beer</div>
+          <div class="menu-card-desc">12oz bottles of Austin Brothers Beer Co. Local favorite.</div>
+          <div class="menu-card-price">$3.00</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="drinks" style="transition-delay:0.15s">
         <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#200010,#0a0010);">&#x1F378;</div>
         <div class="menu-card-body">
-          <div class="menu-card-name">Cocktails</div>
-          <div class="menu-card-desc">Great cocktails crafted to keep the good times rolling. Ask your bartender for tonight's specials.</div>
-          <div class="menu-card-price">$8–12</div>
+          <div class="menu-card-name">Margaritas</div>
+          <div class="menu-card-desc">Served with chips &amp; salsa on Taco Tuesday and Thursday specials.</div>
+          <div class="menu-card-price">Ask your server</div>
         </div>
       </div>
 
-      <div class="menu-card reveal" data-cat="drinks" style="transition-delay:0.7s">
+      <div class="menu-card reveal" data-cat="drinks" style="transition-delay:0.2s">
         <div class="menu-card-img-placeholder" style="background:linear-gradient(135deg,#001010,#001520);">&#x1F964;</div>
         <div class="menu-card-body">
-          <div class="menu-card-name">Cider &amp; Root Beer</div>
-          <div class="menu-card-desc">Refreshing cider options and classic root beer for when you want something different.</div>
-          <div class="menu-card-price">$4–8</div>
+          <div class="menu-card-name">Fountain Pop, Milk &amp; Lemonade</div>
+          <div class="menu-card-desc">Fountain pop with free refills. Ice cold milk and fresh lemonade also available.</div>
+          <div class="menu-card-price">$2.50</div>
         </div>
       </div>
 
