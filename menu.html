@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu | D-Railed Bar &amp; Grill | Durand, MI</title>
+  <meta name="description" content="D-Railed Bar &amp; Grill menu. Flint-style coney dogs, daily specials, kids menu, sides, and drinks. From $2.50. Durand, Michigan." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">D<span>-Railed</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="entertainment.html">Entertainment</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="tel:9892889910" class="nav-cta">Call Us</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-content">
+    <div class="crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Menu</div>
+    <h1>Our <em>Menu</em></h1>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="container">
+    <p class="section-desc" style="margin-bottom:1rem;">Real comfort food, real prices. Something for everyone. $10&ndash;20 per person.</p>
+    <div class="menu-tabs">
+      <button class="tab active" onclick="filterMenu('all', this)">All</button>
+      <button class="tab" onclick="filterMenu('coneys', this)">Coneys</button>
+      <button class="tab" onclick="filterMenu('food', this)">Food &amp; Sides</button>
+      <button class="tab" onclick="filterMenu('specials', this)">Daily Specials</button>
+      <button class="tab" onclick="filterMenu('kids', this)">Kids Menu</button>
+      <button class="tab" onclick="filterMenu('drinks', this)">Drinks</button>
+    </div>
+
+    <div class="menu-grid">
+
+      <div class="menu-card reveal" data-cat="coneys">
+        <img class="menu-card-img" src="https://i.postimg.cc/6qKrwyNS/Screenshot-2026-05-09-at-5-08-04-PM.png" alt="Flint-Style Coney Dogs with fries" />
+        <div class="menu-card-body">
+          <div class="menu-card-name">Flint-Style Coney <span class="menu-card-badge">Fan Favorite</span></div>
+          <div class="menu-card-desc">Koegel dogs served with coney sauce, mustard &amp; onions. The real deal.</div>
+          <div class="menu-card-price">$3.99 each &nbsp;|&nbsp; 2 w/ Fries $10.00</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="food" style="transition-delay:0.05s">
+        <img class="menu-card-img" src="https://i.postimg.cc/zB2NYRWJ/Screenshot-2026-05-09-at-5-17-07-PM.png" alt="Taco Salad" />
+        <div class="menu-card-body">
+          <div class="menu-card-name">Taco Salad</div>
+          <div class="menu-card-desc">A mountain of crispy tortilla chips, seasoned beef, shredded cheese, fresh lettuce, tomatoes, and nacho cheese. Served with sour cream.</div>
+          <div class="menu-card-price">See daily specials</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="food" style="transition-delay:0.1s">
+        <div class="menu-card-img-fallback">Chili Cheese Fries</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Chili Cheese Fries</div>
+          <div class="menu-card-desc">Golden fries smothered in chili and melted cheese. Full order only.</div>
+          <div class="menu-card-price">$6.99</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="food" style="transition-delay:0.15s">
+        <div class="menu-card-img-fallback">Cup of Chili</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Cup of Chili</div>
+          <div class="menu-card-desc">Hearty house chili served by the cup or bowl.</div>
+          <div class="menu-card-price">$3.50 cup &nbsp;|&nbsp; $4.99 bowl</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="food" style="transition-delay:0.2s">
+        <div class="menu-card-img-fallback">Soup of the Day</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Soup of the Day</div>
+          <div class="menu-card-desc">Ask your server what's on today. Our vegetable beef soup is a guest favorite, almost like a stew.</div>
+          <div class="menu-card-price">$3.50 cup &nbsp;|&nbsp; $4.99 bowl</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="food" style="transition-delay:0.25s">
+        <div class="menu-card-img-fallback">Regular Fries</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Regular Fries</div>
+          <div class="menu-card-desc">Crispy golden fries. Available in half or full order.</div>
+          <div class="menu-card-price">$2.99 half &nbsp;|&nbsp; $4.99 full</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="food" style="transition-delay:0.3s">
+        <div class="menu-card-img-fallback">Sweet Potato Fries</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Sweet Potato Fries</div>
+          <div class="menu-card-desc">Sweet and crispy. Available in half or full order.</div>
+          <div class="menu-card-price">$3.99 half &nbsp;|&nbsp; $5.99 full</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="food" style="transition-delay:0.35s">
+        <div class="menu-card-img-fallback">Beer Battered Fries</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Beer Battered Fries</div>
+          <div class="menu-card-desc">Fries with a light beer batter coating. Available in half or full order.</div>
+          <div class="menu-card-price">$3.50 half &nbsp;|&nbsp; $5.50 full</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="specials" style="transition-delay:0.05s">
+        <div class="menu-card-img-fallback">Sunday Fun Day</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Sunday Fun Day</div>
+          <div class="menu-card-desc">Appetizer specials all day plus pint deals. Kick back and enjoy the weekend.</div>
+          <div class="menu-card-price">Ask your server</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="specials" style="transition-delay:0.1s">
+        <div class="menu-card-img-fallback">Coney Monday</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Coney Monday <span class="menu-card-badge">Special</span></div>
+          <div class="menu-card-desc">2 Flint-Style Coneys with fries plus draft pint deals. Amberbock, Bud Light, or Miller Lite on tap.</div>
+          <div class="menu-card-price">$10.00 combo + drink deals</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="specials" style="transition-delay:0.15s">
+        <div class="menu-card-img-fallback">Taco Tuesday</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Taco Tuesday</div>
+          <div class="menu-card-desc">3 Tacos or a Wet Burrito plus Margaritas served with chips &amp; salsa.</div>
+          <div class="menu-card-price">Ask your server</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="specials" style="transition-delay:0.2s">
+        <div class="menu-card-img-fallback">Wednesday Specials</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Wednesday Specials</div>
+          <div class="menu-card-desc">Fried Pickles, Fried Mushrooms, and Fried Cauliflower. "It's good for you."</div>
+          <div class="menu-card-price">Ask your server</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="specials" style="transition-delay:0.25s">
+        <div class="menu-card-img-fallback">Thursday Specials</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Thursday Specials</div>
+          <div class="menu-card-desc">Crispy Chicken Sandwich (with or without fries) plus Margaritas served with chips &amp; salsa.</div>
+          <div class="menu-card-price">Ask your server</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="specials" style="transition-delay:0.3s">
+        <div class="menu-card-img-fallback">Fish Friday</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Fish Friday <span class="menu-card-badge">Best Around</span></div>
+          <div class="menu-card-desc">Beer battered Atlantic cod with fries, cole slaw, and a roll. "We have the best fish dinner around."</div>
+          <div class="menu-card-price">Ask your server</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="specials" style="transition-delay:0.35s">
+        <div class="menu-card-img-fallback">Saturday Specials</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Saturday Specials</div>
+          <div class="menu-card-desc">Chicken Wings by the piece, Fireball shots, and Summer Shanty drinks. The biggest night of the week.</div>
+          <div class="menu-card-price">Ask your server</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="kids" style="transition-delay:0.05s">
+        <div class="menu-card-img-fallback">Lil' Railroaders</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">2-Pc Chicken Tenders <span class="menu-card-badge">Kids</span></div>
+          <div class="menu-card-desc">Two crispy chicken tenders served with fries.</div>
+          <div class="menu-card-price">$6.50</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="kids" style="transition-delay:0.1s">
+        <div class="menu-card-img-fallback">Lil' Railroaders</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Cheese Quesadilla <span class="menu-card-badge">Kids</span></div>
+          <div class="menu-card-desc">Simple and delicious cheesy quesadilla.</div>
+          <div class="menu-card-price">$4.99</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="kids" style="transition-delay:0.15s">
+        <div class="menu-card-img-fallback">Lil' Railroaders</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Grilled Cheese &amp; Fries <span class="menu-card-badge">Kids</span></div>
+          <div class="menu-card-desc">Classic grilled cheese sandwich served with fries.</div>
+          <div class="menu-card-price">$5.99</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="kids" style="transition-delay:0.2s">
+        <div class="menu-card-img-fallback">Lil' Railroaders</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Hot Dog &amp; Chips <span class="menu-card-badge">Kids</span></div>
+          <div class="menu-card-desc">A kid-size hot dog served with chips.</div>
+          <div class="menu-card-price">$3.50</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="drinks" style="transition-delay:0.05s">
+        <div class="menu-card-img-fallback">Drafts</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Draft Pints</div>
+          <div class="menu-card-desc">Amberbock, Bud Light, and Miller Lite on tap. Cold and always fresh.</div>
+          <div class="menu-card-price">Ask your server</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="drinks" style="transition-delay:0.1s">
+        <div class="menu-card-img-fallback">Bottles</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Austin Brothers Beer</div>
+          <div class="menu-card-desc">12oz bottles of Austin Brothers Beer Co. Local favorite.</div>
+          <div class="menu-card-price">$3.00</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="drinks" style="transition-delay:0.15s">
+        <div class="menu-card-img-fallback">Cocktails</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Margaritas</div>
+          <div class="menu-card-desc">Served with chips &amp; salsa on Taco Tuesday and Thursday specials.</div>
+          <div class="menu-card-price">Ask your server</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" data-cat="drinks" style="transition-delay:0.2s">
+        <div class="menu-card-img-fallback">Non-Alcoholic</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Fountain Pop, Milk &amp; Lemonade</div>
+          <div class="menu-card-desc">Fountain pop with free refills. Ice cold milk and fresh lemonade also available.</div>
+          <div class="menu-card-price">$2.50</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-logo">D-Railed</div>
+  <div class="footer-tagline">Bar &amp; Grill &bull; 111 N Saginaw St, Durand, MI &bull; (989) 288-9910</div>
+  <div class="footer-track">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="entertainment.html">Entertainment</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:9892889910">Call Us</a>
+  </div>
+  <div class="footer-copy">&copy; 2026 D-Railed Bar &amp; Grill. All rights reserved.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
